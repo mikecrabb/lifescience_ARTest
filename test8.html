@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  <!-- <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script> -->
+
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene>
+    <a-assets timeout="30000">
+      <a-asset-item id="molecule" src="chimpanzee_skull/chimp.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-camera position="0 1.2 0"></a-camera>
+
+    <!-- 2D environment omitted for simplicity -->
+
+    <a-entity id="dino" position="0 0.7 0" scale="0.16 0.16 0.16">
+      <a-entity position="0 0 0" rotation="0 0 0"
+                gltf-model="#molecule"
+                animation-mixer
+                shadow="cast: true; receive: false"></a-entity>
+    </a-entity>
+
+    <!-- Lights configuration omitted for simplicity -->
+  </a-scene>
+
+
+</body>
+
+</html>
