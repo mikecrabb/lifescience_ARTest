@@ -12,7 +12,7 @@
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene>
     <a-assets timeout="30000">
-      <a-asset-item id="person" src="skelly.OBJ"></a-asset-item>
+      <a-asset-item id="person" src="skeleton4.gltf"></a-asset-item>
 
     </a-assets>
 
@@ -21,9 +21,9 @@
     <!-- 2D environment omitted for simplicity -->
 
 
-    <a-entity id="person" position="0 0 -6" scale="0.1 0.1 0.1">
+    <a-entity id="person" position="0 0 -6" scale="1 1 1">
       <a-entity position="0 0 0" rotation="0 0 0"
-                obj-model="#person"
+                gltf-model="#person"
                 animation-mixer
                 shadow="cast: true; receive: false"></a-entity>
     </a-entity>
