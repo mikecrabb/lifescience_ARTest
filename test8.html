@@ -13,6 +13,8 @@
   <a-scene>
     <a-assets timeout="30000">
       <a-asset-item id="molecule" src="chimpanzee_skull/chimp.gltf"></a-asset-item>
+      <a-asset-item id="person" src="lymphatic_system/scene.gltf"></a-asset-item>
+
     </a-assets>
 
     <a-camera position="0 1.2 0"></a-camera>
@@ -25,6 +27,14 @@
                 animation-mixer
                 shadow="cast: true; receive: false"></a-entity>
     </a-entity>
+
+    <a-entity id="person" position="0 0 -15" scale="0.005 0.005 0.005">
+      <a-entity position="0 0 0" rotation="0 0 0"
+                gltf-model="#person"
+                animation-mixer
+                shadow="cast: true; receive: false"></a-entity>
+    </a-entity>
+
 
     <!-- Lights configuration omitted for simplicity -->
   </a-scene>
